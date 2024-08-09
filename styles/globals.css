@@ -2,32 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #e5e7eb;
+  background-color: #1f2937;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.025em;
+  color: #f3f4f6;
+}
+
+input, button {
+  border: none;
+  outline: none;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.text-gray-100 {
+  color: #f7fafc;
+}
+
+.text-gray-200 {
+  color: #edf2f7;
+}
+
+.text-gray-400 {
+  color: #cbd5e0;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(10px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(20px);
+}
+
+@keyframes glowingText {
+	0% {
+	  filter: brightness(100%);
+	}
+	50% {
+	  filter: brightness(125%);
+	}
+	100% {
+	  filter: brightness(100%);
+	}
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .glowing-animation {
+    animation: glowingText2 2s infinite;
   }
-}
+
+  .gradient-link-green {
+    font-weight: bold;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #0d8048, #3b4ddc);
+    }
