@@ -25,8 +25,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-10 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse md:space-x-6 relative">
+    <div className="min-h-screen bg-gray-900 text-white py-10 px-4 flex justify-center items-center">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row-reverse md:space-x-6 relative">
         {/* Recipe Details Section */}
         {selectedRecipe && (
           <div className="md:flex-1 md:ml-6 bg-gray-800/90 backdrop-blur-lg shadow-2xl p-4 md:p-6 rounded-lg overflow-auto z-10 mb-4 md:mb-0">
@@ -42,10 +42,10 @@ export default function Home() {
 
         {/* Recipe List Section */}
         <div
-          className={`w-full md:w-[45%] flex flex-col justify-center transition-all duration-500`}
+          className={`w-full md:w-[45%] flex flex-col justify-center transition-all duration-500 mx-auto`}
         >
-          <h1 className="text-4xl font-extrabold text-left mb-8 tracking-wide">
-          <span className="text-[#ffd194]">🍎InstaChef</span>
+          <h1 className="text-4xl font-extrabold text-center mb-8 tracking-wide">
+            <span className="text-[#ffd194]">🍎InstaChef</span>
           </h1>
           <div className="flex items-center space-x-4 mb-6 justify-center">
             <input
@@ -75,5 +75,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
